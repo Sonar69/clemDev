@@ -24,7 +24,7 @@ const ProjectCard = ({project}) => {
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <img className='tech-icon'
-                 src={`${process.env.PUBLIC_URL}/images/Skills/${project.tech}`}
+                 src={`${process.env.PUBLIC_URL}/images/skills/${project.tech}`}
                  alt={project.tech}/>
         </div>
     );

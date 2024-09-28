@@ -21,7 +21,7 @@ const Skills = () => {
             <div className="skills-grid">
                 {skills.map((skill, index) => (
                     <div key={index} className="skill-card">
-                        <img src={`${process.env.PUBLIC_URL}/images/Skills/${skill.icon}`}
+                        <img src={`${process.env.PUBLIC_URL}/images/skills/${skill.icon}`}
                              alt={`${skill.name} logo`}
                              className="skill-icon"/>
                         <h3 className="skill-name">{skill.name}</h3>

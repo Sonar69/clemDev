@@ -36,7 +36,7 @@ const Home = () => {
                         </p>
                         <p>Vous pouvez <DownloadCV/>mon CV.</p>
                         <div className='select-time'>
-                            <p>Ou vous amuser avec l'écran en dessous, sélectionner le temp de l'animation</p>
+                            <p>Ou vous amuser avec l'écran en dessous, sélectionner la vitesse de l'animation</p>
                             <select
                                 value={time}
                                 onChange={handleTime}

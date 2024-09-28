@@ -80,3 +80,11 @@
         transform: translateX(-100%);
     }
 }
+
+/* MEDIA QUERY */
+
+@media (max-width: 990px) {
+    .skills-grid {
+        animation: slide-text 7s linear infinite;;
+    }
+}

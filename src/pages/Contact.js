@@ -2,17 +2,15 @@ import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 import Header from '../components/Header';
 import Skills from "../components/Skills";
-import '../assets/styles/pages/contact.css'
+import '../assets/styles/pages/contact.css';
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 /**
- *
- * @returns {Element}
- * @constructor
+ * Formulaire de contact avec protection reCAPTCHA
+ * @returns {JSX.Element}
  */
 const Contact = () => {
-    const keySite = '6Le29FEqAAAAAJURK6IdapS7MpZB_ogPwxyCtHVJ';
+    // Clé du site reCAPTCHA
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -22,33 +20,52 @@ const Contact = () => {
     const [isSent, setIsSent] = useState(false);
     const [captchaValue, setCaptchaValue] = useState(null);
 
+    /**
+     * Gère le changement des champs de formulaire
+     * @param {Object} e - Événement de changement
+     */
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData({...formData, [name]: value});
     };
 
+    /**
+     * Gère la soumission du formulaire
+     * @param {Object} e - Événement de soumission
+     */
     const handleSubmit = (e) => {
+        e.preventDefault();
+        // Validation des champs
+        if (formData.name.trim() === '') {
+            alert('Veuillez entrer votre nom');
+            return;
+        }
+        if (formData.email.trim() === '') {
+            alert('Veuillez entrer votre adresse email');
+            return;
+        }
+        if (formData.message.trim() === '') {
+            alert('Veuillez entrer votre message');
+            return;
+        }
         if (!captchaValue) {
             alert('Please complete the CAPTCHA.');
             return;
         }
-        // regex de verification d'email
+        // Regex de vérification d'email
         const emailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm;
-
         if (!emailRegex.test(formData.email)) {
             alert('Veuillez entrer une adresse email valide');
             return;
         }
-        e.preventDefault();
-
+        // Envoi de l'email via email.js
         emailjs.send(
-            'service_dpy1t0o', // Remplace par ton Service ID
-            'send_mail', // Remplace par ton Template ID
+            'service_dpy1t0o',
+            'send_mail',
             formData,
-            'pAnUWXipLXbkRqZKW' // Remplace par ton User ID
+            'pAnUWXipLXbkRqZKW'
         ).then((response) => {
             console.log('SUCCESS!', response.status, response.text);
-            console.log(FormData);
             setIsSent(true);
             setFormData({name: '', email: '', message: ''});
         }).catch((err) => {
@@ -62,14 +79,15 @@ const Contact = () => {
             <div className='main-contact'>
                 <div className='head-contact'>
                     <h1>Contact</h1>
-                    <div>Vous pouvez me contacter :
+                    <div>
+                        Vous pouvez me contacter :
                         <a href='mailto:clembonnet.dev@gmail.com'>
                             <i className="fa-solid fa-envelope"></i>
                         </a>
-                        <a href='https://github.com/Clembonnet'>
+                        <a href='https://github.com/Sonar69'>
                             <i className="fa-brands fa-github"></i>
                         </a>
-                        <a href='https://www.linkedin.com/in/clembonnet-lucas-64399520a/'>
+                        <a href='https://linkedin.com/in/clément-bonnet-31abb9296'>
                             <i className="fa-brands fa-linkedin"></i>
                         </a>
                     </div>
@@ -103,12 +121,12 @@ const Contact = () => {
                         required
                     />
                     <ReCAPTCHA
-                        sitekey={keySite}
+                        sitekey='6LcnDFIqAAAAAIHW62FiZ5k6-SpJQJ-B953F4dj-'
                         onChange={(value) => setCaptchaValue(value)}
                     />
                     <button type="submit">Envoyer</button>
                 </form>
-                {isSent && <p>Message sent successfully!</p>}
+                {isSent && <p>Message envoyé avec succès!</p>}
             </div>
             <Skills/>
         </div>

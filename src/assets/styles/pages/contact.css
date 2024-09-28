@@ -38,6 +38,7 @@ form {
     grid-template-columns: 1fr;
     gap: 1em;
     width: 50%;
+    justify-items: center;
 }
 
 input[type="text"],
@@ -74,4 +75,13 @@ button[type="submit"]:hover {
     transition: background 0.4s ease-in-out;
     box-shadow: 0 0 3px 1px var(--color-black);
 
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 673px) {
+    form {
+        width: 90%;
+        font-size: 0.5em;
+    }
 }

@@ -1,7 +1,7 @@
 
 .particle-container {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 900px;
     height: 10em;
     background-color: var(--color-brown-claire);
@@ -52,5 +52,13 @@
     100% {
         opacity: 0;
         transform: scale(2);
+    }
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 573px) {
+    .particle-container {
+        display: none;
     }
 }

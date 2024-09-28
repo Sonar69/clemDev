@@ -66,3 +66,23 @@
     color: var(--color-white);
 
 }
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+    .main-home h1 {
+        font-size: 2em;
+    }
+
+    .main-home h2 {
+        font-size: 1.5em;
+    }
+
+    .main-home p {
+        font-size: 1em;
+    }
+
+    .select-time select {
+        font-size: 1em;
+    }
+}
