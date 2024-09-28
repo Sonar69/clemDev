@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Skills from "../components/Skills";
 
 
 /**
@@ -10,9 +10,9 @@ import Footer from '../components/Footer';
  */
 const Contact = () => {
     return (
-        <div>
+        <div className='container'>
             <Header/>
-            <main>
+            <div>
                 <h1>Contact</h1>
                 <p>Vous pouvez me contacter à l'adresse suivante: 123 Rue du Paradis, 75000 Paris</p>
                 <p>ou par téléphone au 01 23 45 67 89</p>
@@ -26,8 +26,8 @@ const Contact = () => {
                 </form>
                 <p>N'hésitez pas à me contacter pour plus d'informations.</p>
 
-            </main>
-            <Footer/>
+            </div>
+            <Skills/>
         </div>
     );
 };

@@ -1,3 +1,6 @@
+/*IMPORT CSS*/
+@import url('./assets/styles/variable-color.css');
+
 #root {
     min-height: 100vh;
 }
@@ -10,4 +13,9 @@
 
 .container {
     height: 100vh;
+    display: grid;
+    background: var(--color-background);
+    backdrop-filter: blur(3px) grayscale(50%);
+    grid-template-rows: 10% 70% 20%;
+    font-family: exo-2, sans-serif;
 }

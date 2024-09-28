@@ -1,0 +1,21 @@
+/* variables.css */
+
+:root {
+    --color-white: #dbd5d5;
+    --color-black: #1f1f1f;
+    --color-brown: #3a3a3a;
+    --color-blue: #5f74d7;
+    --color-pink: #e15887;
+    --color-brown-claire: #665E5842;
+    --color-background: linear-gradient(135deg, #1F1F1F7D, #3A3A3A80);
+    --color-blur-nav: #ffffff;
+}
+
+@font-face {
+
+    font-family: "exo-2";
+    src: url('../font/Exo_2/Exo2-VariableFont_wght.ttf');
+}
+
+/* IMPORT styles.css */
+/* @import url('variables.css');*/

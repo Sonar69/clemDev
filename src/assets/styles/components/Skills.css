@@ -1,42 +1,44 @@
+/*IMPORT COLOR*/
+@import url('../variable-color.css');
+
 .skills-container {
     padding: 20px;
-    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
-    color: #fff;
+    background: var(--color-background);
+    color: var(--color-white);
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 10px var(--color-black);
+    overflow: hidden;
 }
 
 .skills-title {
-    font-size: 2rem;
+    font-size: 1em;
     margin-bottom: 20px;
-    color: #ff4081;
-    text-shadow: 2px 2px 0 #000;
+    color: var(--color-blue);
+    text-shadow: 0 1px 0 var(--color-black);
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    display: flex;
+    gap: 0.7em;
+    justify-content: space-around;
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-brown-claire);
     padding: 10px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    width: 8em;
 }
 
 .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(255, 64, 129, 0.8);
+    box-shadow: 0 0 20px var(--color-blue);
 }
 
 .skill-icon {
-    width: 60px;
-    height: 60px;
+    width: 2em;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
@@ -46,17 +48,17 @@
 }
 
 .skill-name {
-    font-size: 1.2rem;
+    font-size: 0.7em;
     margin: 0;
-    color: #ff4081;
-    text-shadow: 1px 1px 0 #000;
+    color: var(--color-blue);
+    text-shadow: 1px 1px 0 var(--color-black);
 }
 
 .waiting-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-brown-claire);
     padding: 10px;
     border-radius: 10px;
     position: relative;
@@ -65,7 +67,7 @@
 
 .waiting-text {
     font-size: 1.2rem;
-    color: #ff4081;
+    color: var(--color-pink);
     white-space: nowrap;
     position: absolute;
     animation: slide-text 7s linear infinite;

@@ -1,0 +1,62 @@
+/*IMPORT COLOR*/
+@import url('../variable-color.css');
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-home {
+    color: var(--color-white);
+    font-family: exo-2, sans-serif;
+}
+
+.main-home h1 {
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+.main-home h2 {
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+
+.main-home p {
+    padding: 0.5em 0;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.1em;
+    width: 50%;
+}
+
+.main-home a {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+.main-home a:hover {
+    color: var(--color-pink);
+    transition: color 0.4s ease-in-out;
+}
+
+.select-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.select-time p {
+    margin: 0.5em 0;
+}
+
+.select-time select {
+    padding: 0.5em;
+    border-radius: 5em;
+    border: 1px solid var(--color-blue);
+    font-size: 1em;
+    background: transparent;
+    color: var(--color-white);
+
+}

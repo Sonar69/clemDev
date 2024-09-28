@@ -1,0 +1,57 @@
+/*IMPORT COLOR*/
+@import url('../variable-color.css');
+
+.particle-container {
+    position: relative;
+    width: 100%;
+    height: 10em;
+    background-color: var(--color-brown-claire);
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-blue); /* Particle color */
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-fade 1s ease-out forwards;
+}
+
+
+.glow {
+    position: absolute;
+    width: 100px; /* Ajuste la taille de la lueur */
+    height: 100px;
+    border-radius: 50%;
+    background: var(--color-blur-nav);
+    pointer-events: none; /* Empêche la lueur d'interférer avec les interactions de la souris */
+    box-shadow: 0 0 10px var(--color-blur-nav), 0 0 20px var(--color-blur-nav), 0 0 30px var(--color-blur-nav);
+    animation: glow-fade 1s ease-out forwards;
+    z-index: -10;
+}
+
+@keyframes particle-fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes glow-fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}

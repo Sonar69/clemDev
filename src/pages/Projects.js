@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
+import Skills from "../components/Skills";
 
 const projects = [
     {
@@ -27,14 +28,15 @@ const projects = [
  */
 const Projects = () => {
     return (
-        <div>
+        <div className='container'>
             <Header/>
-            <main>
+            <div>
                 <h1>Mes Projets</h1>
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project}/>
                 ))}
-            </main>
+            </div>
+            <Skills/>
         </div>
     );
 };
