@@ -1,9 +1,8 @@
-/*IMPORT COLOR*/
-@import url('../variable-color.css');
 
 .particle-container {
     position: relative;
     width: 100%;
+    max-width: 900px;
     height: 10em;
     background-color: var(--color-brown-claire);
     overflow: hidden;

@@ -1,0 +1,46 @@
+
+.project-card {
+    padding: 0.5em;
+    background-color: var(--color-brown-claire);
+    color: var(--color-white);
+    width: 50%;
+    margin: 0.5em auto;
+    border-radius: 0.5em;
+}
+
+.project-card:hover {
+    background-color: var(--color-brown);
+}
+
+
+.project-image {
+    width: 8em;
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px var(--color-blue);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.project-card p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.tech-icon {
+    margin: 0.5em;
+    width: 1.2em;
+}
+
+.tech-icon:hover {
+    transform: scale(1.5);
+    transition: transform 0.4s ease-in-out;
+}

@@ -16,6 +16,6 @@
     display: grid;
     background: var(--color-background);
     backdrop-filter: blur(3px) grayscale(50%);
-    grid-template-rows: 10% 70% 20%;
+    grid-template-rows: 6% 75% 19%;
     font-family: exo-2, sans-serif;
 }

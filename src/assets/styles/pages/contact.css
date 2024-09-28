@@ -1,0 +1,77 @@
+
+.main-contact {
+    color: var(--color-white);
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+.main-contact h1 {
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+
+.main-contact p {
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+
+.main-contact a {
+    color: var(--color-blue);
+    text-decoration: none;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+}
+
+.main-contact a:hover,
+.main-contact i:hover {
+    color: var(--color-pink);
+    scale: 1.5;
+    transition: 0.3s ease-in-out;
+}
+
+form {
+    padding: 1em;
+    margin: auto;
+    background-color: var(--color-brown-claire);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    background: var(--color-brown);
+    color: var(--color-white);
+    border: 1px solid var(--color-blue);
+    border-radius: 0.5em;
+    box-shadow: 0 0 4px 1px var(--color-black);
+}
+
+textarea {
+    resize: none;
+    height: 15em;
+}
+
+button[type="submit"] {
+    background: var(--color-brown-claire);
+    color: var(--color-white);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+button[type="submit"]:hover {
+    background: var(--color-blue);
+    transition: background 0.4s ease-in-out;
+    box-shadow: 0 0 3px 1px var(--color-black);
+
+}

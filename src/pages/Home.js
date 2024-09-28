@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import '../assets/styles/pages/home.css'
 import Skills from "../components/Skills";
 import ParticleDiv from "../components/ParticleDiv";
+import DownloadCV from "../components/DownloadCv";
 
 /**
  *
@@ -33,7 +34,7 @@ const Home = () => {
                             déterminé à exceller dans cette nouvelle carrière.
 
                         </p>
-                        <p>Vous pouvez <a href='/'>télécharger</a> mon CV.</p>
+                        <p>Vous pouvez <DownloadCV/>mon CV.</p>
                         <div className='select-time'>
                             <p>Ou vous amuser avec l'écran en dessous, sélectionner le temp de l'animation</p>
                             <select

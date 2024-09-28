@@ -1,5 +1,3 @@
-/*IMPORT COLOR*/
-@import url('../variable-color.css');
 
 * {
     margin: 0;
@@ -12,7 +10,7 @@ header {
     border-bottom: 1px solid var(--color-blue);
     box-shadow: 0 0 6px 1px var(--color-blue);
     padding: 1em;
-    height: 60%;
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
