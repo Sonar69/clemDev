@@ -1,6 +1,6 @@
 
 .skills-container {
-    padding: 20px;
+    padding: 0.8em;
     background: var(--color-background);
     color: var(--color-white);
     text-align: center;
@@ -74,17 +74,25 @@
 
 @keyframes slide-text {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-190%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
 }
 
 /* MEDIA QUERY */
 
 @media (max-width: 990px) {
+    .skills-container {
+        padding: 0;
+
+    }
+
     .skills-grid {
-        animation: slide-text 7s linear infinite;;
+        animation: slide-text 20s linear infinite;;
     }
 }

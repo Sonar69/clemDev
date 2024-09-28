@@ -80,6 +80,7 @@
 
     .main-home p {
         font-size: 1em;
+        width: 80%;
     }
 
     .select-time select {

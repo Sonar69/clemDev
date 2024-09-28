@@ -84,4 +84,8 @@ button[type="submit"]:hover {
         width: 90%;
         font-size: 0.5em;
     }
+
+    textarea {
+        height: 10em;
+    }
 }
