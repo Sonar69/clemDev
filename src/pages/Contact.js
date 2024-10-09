@@ -121,7 +121,7 @@ const Contact = () => {
                         required
                     />
                     <ReCAPTCHA
-                        sitekey='6LcnDFIqAAAAAIHW62FiZ5k6-SpJQJ-B953F4dj-'
+                        sitekey='your_site_key'
                         onChange={(value) => setCaptchaValue(value)}
                     />
                     <button type="submit">Envoyer</button>
