@@ -88,4 +88,8 @@ button[type="submit"]:hover {
     textarea {
         height: 10em;
     }
+
+    .main-contact p {
+        font-size: 1em;
+    }
 }

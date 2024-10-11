@@ -13,6 +13,13 @@ header {
     height: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: block;
+    width: 100%;
 }
 
 nav a {

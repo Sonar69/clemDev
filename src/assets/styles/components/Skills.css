@@ -69,18 +69,19 @@
     color: var(--color-pink);
     white-space: nowrap;
     position: absolute;
-    animation: slide-text 7s linear infinite;
+    animation: slide-text 10s linear infinite;
 }
 
 @keyframes slide-text {
     0% {
-        transform: translateX(0%);
+        transform: translateX(50%);
     }
+
     50% {
-        transform: translateX(-190%);
+        transform: translateX(-50%);
     }
     100% {
-        transform: translateX(0%);
+        transform: translateX(50%);
     }
 }
 
