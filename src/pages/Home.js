@@ -34,7 +34,7 @@ const Home = () => {
                             déterminé à exceller dans cette nouvelle carrière.
 
                         </p>
-                        <p>Vous pouvez <DownloadCV/>mon CV.</p>
+                        <div>Vous pouvez <DownloadCV/> mon CV.</div>
                         <div className='select-time'>
                             <p>Ou vous amuser avec l'écran en dessous, sélectionner la vitesse de l'animation</p>
                             <select
@@ -42,7 +42,7 @@ const Home = () => {
                                 onChange={handleTime}
                             >
                                 <option value={10000}>1</option>
-                                <option value={1000} selected>2</option>
+                                <option defaultValue={1000} value={1000}>2</option>
                                 <option value={100}>3</option>
                             </select>
                         </div>

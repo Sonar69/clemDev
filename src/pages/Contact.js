@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import emailjs from 'emailjs-com';
 import Header from '../components/Header';
 import Skills from "../components/Skills";
@@ -10,15 +10,14 @@ import ReCAPTCHA from "react-google-recaptcha";
  * @returns {JSX.Element}
  */
 const Contact = () => {
-    // Clé du site reCAPTCHA
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
 
-    const [isSent, setIsSent] = useState(false);
     const [captchaValue, setCaptchaValue] = useState(null);
+    const recaptchaRef = useRef(null);
 
     /**
      * Gère le changement des champs de formulaire
@@ -66,10 +65,13 @@ const Contact = () => {
             'pAnUWXipLXbkRqZKW'
         ).then((response) => {
             console.log('SUCCESS!', response.status, response.text);
-            setIsSent(true);
             setFormData({name: '', email: '', message: ''});
+            alert("Message envoyé avec succès!");
+            setCaptchaValue(null);
+            // Réinitialisation du CAPTCHA
+            recaptchaRef.current.reset();
         }).catch((err) => {
-            console.error('FAILED...', err);
+            console.log('FAILED...', err);
         });
     };
 
@@ -121,12 +123,12 @@ const Contact = () => {
                         required
                     />
                     <ReCAPTCHA
-                        sitekey='your_secret_key'
+                        ref={recaptchaRef}
+                        sitekey='6LcnDFIqAAAAAIHW62FiZ5k6-SpJQJ-B953F4dj-'
                         onChange={(value) => setCaptchaValue(value)}
                     />
                     <button type="submit">Envoyer</button>
                 </form>
-                {isSent && <p>Message envoyé avec succès!</p>}
             </div>
             <Skills/>
         </div>
