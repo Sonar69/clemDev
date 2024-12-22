@@ -10,10 +10,9 @@ import '../assets/styles/components/project-card.css'
 const ProjectCard = ({project}) => {
 
     const handleProject = () => {
-        if (project.link === '/projects') {
-            alert('Projet en cour soyer indulgent');
+        if (window.confirm(`Vous allez être redirigez vers ${project.link}`)) {
+            window.location.href = project.link;
         }
-        window.location.href = project.link;
     }
     return (
         <div className="project-card">

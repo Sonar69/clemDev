@@ -16,7 +16,7 @@ const projects = [
         title: 'Pokedex v1',
         description: 'Pokedex réaliser en react native , recuperation des données par API',
         image: 'pokedex-v1.png',
-        link: '/projects',
+        link: 'https://github.com/Sonar69/Pokedex',
         tech: 'react-logo.png'
     },
     {
